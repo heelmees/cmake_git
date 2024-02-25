@@ -11,6 +11,6 @@ int main()
 		std::cout << "File error!" << std::endl;
 	}
 
-	std::cout << "---" << sum(2, 3) << "---" << std::endl;
+	std::cout << "---" << Func::sum(2, 3) << "---" << std::endl;
 	return 0;
 }
