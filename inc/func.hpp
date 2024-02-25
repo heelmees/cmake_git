@@ -2,7 +2,9 @@
 #define FUNC_HPP
 
 namespace Func {
-    int sum(int a, int b);
+    int getLastRunNumber(std::string);
+    std::string getDebugLine(int num);
+    void appendStringToFile(std::string fileName, std::string line);
 }
 
 #endif

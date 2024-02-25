@@ -4,13 +4,13 @@
 
 int main()
 {
-	std::ifstream in("input.txt");
-
-	if (!in.is_open())
-	{
-		std::cout << "File error!" << std::endl;
+	std::string fileName = "input.txt";
+	auto runNum = Func::getLastRunNumber(fileName);
+	if (runNum == -1) {
+		//Начать заново
+		runNum = 0;
 	}
-
-	std::cout << "---" << Func::sum(2, 3) << "---" << std::endl;
-	return 0;
+	runNum++;
+	auto newLine = Func::getDebugLine(runNum);
+	Func::appendStringToFile(fileName, newLine);
 }
