@@ -76,7 +76,7 @@ namespace Func {
 		return date_time_str;
 	}
 	
-	void appendStringToFile(std::string fileName, std::string line) {
+	void appendStringToFile(std::string fileName, std::string line, int runNum) {
 		// Открываем файл в режиме добавления (std::ios::app)
 		std::ofstream file(fileName, std::ios::app);
 
@@ -85,8 +85,11 @@ namespace Func {
 			throw std::runtime_error("Не удалось открыть файл: " + fileName);
 		}
 
-		// Добавляем строку в конец файла и новую строку после неё
-		file << std::endl << line;
+		// Добавляем строку в конец файла
+		if (runNum > 1) {
+			file << std::endl;
+		}
+		file << line;
 
 		// Закрываем файл
 		file.close();

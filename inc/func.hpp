@@ -4,7 +4,7 @@
 namespace Func {
     int getLastRunNumber(std::string);
     std::string getDebugLine(int num);
-    void appendStringToFile(std::string fileName, std::string line);
+    void appendStringToFile(std::string fileName, std::string line, int runNum);
 }
 
 #endif
